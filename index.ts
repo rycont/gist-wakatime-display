@@ -2,7 +2,6 @@ import "https://deno.land/x/dotenv/load.ts";
   
 ;(async () => {
   const [WakaTimeURI, GistId, GithubToken] = ['WakaTimeURI', 'GistId', 'GithubToken'].map(Deno.env.get)
-  console.log(WakaTimeURI, GistId, GithubToken)
   if (!(WakaTimeURI && GistId && GithubToken)) throw "Requierd env was not provided"
   
   const fetched = (await (await fetch(WakaTimeURI)).json()).data
