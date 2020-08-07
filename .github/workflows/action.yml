@@ -15,8 +15,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Update!
-        run: deno run --allow-net --allow-read --allow-env index.ts
         env:
           WakaTimeURI: ${{ secrets.WAKATIME }}
           GistId: ${{ secrets.GISTID }}
           GithubToken: ${{ secrets.GITHUBTOKEN }}
+        run: deno run --allow-net --allow-read --allow-env index.ts
