@@ -5,7 +5,6 @@ import "https://deno.land/x/dotenv/load.ts";
   if (!(WakaTimeURI && GistId && GithubToken)) throw "Requierd env was not provided"
   
   const fetched = (await (await fetch(WakaTimeURI)).json()).data
-  // console.log(fetched)
   const printified = fetched.map((e: {
     name: string,
     percent: number
