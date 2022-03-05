@@ -1,4 +1,4 @@
-import "https://deno.land/x/dotenv/load.ts";
+import "https://deno.land/x/dotenv/load.ts"
   
 ;(async () => {
   const [WakaTimeURI, GistId, GithubToken] = ['WakaTimeURI', 'GistId', 'GithubToken'].map(Deno.env.get)
